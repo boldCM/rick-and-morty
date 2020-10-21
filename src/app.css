@@ -1,14 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap");
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+:root {
+  --font-family: "Patrick Hand SC", cursive;
+}
+
 html {
   font-size: 16px;
+  font-family: var(--font-family);
 }
 
 body {
   margin: 0;
   background: darkslategray;
+}
+
+.main {
+  /* display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  position: relative; */
+}
+.main__containerGet {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  position: relative;
+  /* place-items: center; */
 }

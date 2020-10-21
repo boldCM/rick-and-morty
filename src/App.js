@@ -9,7 +9,9 @@ import { getCharacterById } from "../src/utils/api";
 // }
 
 function App() {
-  const containerGet = createElement("div", {});
+  const containerGet = createElement("div", {
+    className: "main__containerGet",
+  });
 
   // funktion erstellen, die im Hintergrund läuft und mit die Charactere holt...(aus der küche bzw Lager ;))
   async function getCharacters() {
@@ -35,6 +37,7 @@ function App() {
   getCharacters();
 
   const main = createElement("main", {
+    className: "main",
     children: [containerGet],
   });
   return main;
