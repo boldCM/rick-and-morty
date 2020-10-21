@@ -1,7 +1,7 @@
 import "./app.css";
 // import Header from "./components/Header";
 import { createElement } from "./utils/elements";
-import { createCharacterCard } from "../../rick-and-morty/src/utils/character";
+import { createCharacterCard } from "../src/components/character";
 import { getCharacterById } from "../src/utils/api";
 
 // function waitFor(delay) {
