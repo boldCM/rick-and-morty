@@ -31,5 +31,6 @@ body {
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(2, 1fr);
   position: relative;
+  width: 100vw;
   /* place-items: center; */
 }
