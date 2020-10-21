@@ -28,9 +28,10 @@ body {
 }
 .main__containerGet {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  position: relative;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  padding: 0 2% 0 0%;
+  /* position: relative; */
   width: 100vw;
   /* place-items: center; */
 }
