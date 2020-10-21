@@ -36,10 +36,3 @@ body {
   width: 100%;
   /* place-items: center; */
 }
-
-.main__searchBar {
-  border-radius: 10px;
-  margin: 20px 0 0 3%;
-  padding: 5px;
-  width: 200px;
-}
