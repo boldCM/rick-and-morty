@@ -13,6 +13,11 @@ function App() {
   // const leonsCharacterContainer = createCharacterCard({ name, avatar });
   // müsste bei mir characterContainer sein
 
+  const mainHeader = createElement("h1", {
+    innerText: "Rick and Morty",
+    className: "main__header",
+  });
+
   const containerGet = createElement("div", {
     className: "main__containerGet",
     // children: [leonsCharacterContainer],
@@ -34,15 +39,15 @@ function App() {
 
   const getSearch = searchComponent({
     onchange: (value) => {
-      loadCharacters(value)};
-    ,
+      loadCharacters(value);
+    },
   });
 
   loadCharacters();
 
   const main = createElement("main", {
     className: "main",
-    children: [getSearch, containerGet],
+    children: [mainHeader, getSearch, containerGet],
   });
   return main;
 }

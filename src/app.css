@@ -23,6 +23,18 @@ body {
 .main {
   width: 100%;
 }
+
+.main__header {
+  margin-top: 0px;
+  padding-bottom: 20px;
+  background: linear-gradient(#bbbbbb, darkslategray);
+  top: 0;
+  height: 80px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
 .main__containerGet {
   display: grid;
   grid-template-columns: repeat(4, 25%);
