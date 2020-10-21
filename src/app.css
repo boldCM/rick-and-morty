@@ -25,13 +25,21 @@ body {
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(2, 1fr);
   position: relative; */
+  width: 100%;
 }
 .main__containerGet {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(10, 1fr);
-  padding: 0 2% 0 0%;
+  grid-template-columns: repeat(4, 25%);
+  /* grid-template-rows: repeat(10, 1fr); */
+  padding: 0 2.5% 0 2%;
   /* position: relative; */
-  width: 100vw;
+  width: 100%;
   /* place-items: center; */
+}
+
+.main__searchBar {
+  border-radius: 10px;
+  margin: 20px 0 0 3%;
+  padding: 5px;
+  width: 200px;
 }

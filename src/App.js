@@ -36,6 +36,7 @@ function App() {
   const searchBar = createElement("input", {
     type: "text",
     className: "main__searchBar",
+    placeholder: "Search by anything u want",
     onchange: (event) => loadCharacters(event.target.value),
   });
 
