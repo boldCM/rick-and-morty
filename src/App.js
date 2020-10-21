@@ -3,6 +3,7 @@ import "./app.css";
 import { createElement } from "./utils/elements";
 import { createCharacterCard } from "../src/components/character";
 import { getCharacter } from "../src/utils/api";
+import { searchComponent } from "../../rick-and-morty/src/components/searchComponent";
 
 // function waitFor(delay) {
 //   return new Promise((res) => setTimeout(res, delay));
@@ -11,6 +12,11 @@ import { getCharacter } from "../src/utils/api";
 function App() {
   // const leonsCharacterContainer = createCharacterCard({ name, avatar });
   // müsste bei mir characterContainer sein
+
+  const mainHeader = createElement("h1", {
+    innerText: "Rick and Morty",
+    className: "main__header",
+  });
 
   const containerGet = createElement("div", {
     className: "main__containerGet",
@@ -31,18 +37,17 @@ function App() {
     containerGet.append(...characterElements);
   }
 
-  loadCharacters();
-
-  const searchBar = createElement("input", {
-    type: "text",
-    className: "main__searchBar",
-    placeholder: "Search by anything u want",
-    onchange: (event) => loadCharacters(event.target.value),
+  const getSearch = searchComponent({
+    onchange: (value) => {
+      loadCharacters(value);
+    },
   });
+
+  loadCharacters();
 
   const main = createElement("main", {
     className: "main",
-    children: [searchBar, containerGet],
+    children: [mainHeader, getSearch, containerGet],
   });
   return main;
 }
