@@ -6,17 +6,11 @@ export const searchComponent = ({ onchange }) => {
     type: "text",
     className: "searchComponent__searchBar",
     placeholder: "Search by anything u want",
-    onsubmit: (event) => {
-      event.preventDefault();
-      onchange(input.value);
-      // loadCharacters(event.target.value),}
-    },
   });
 
   const submitButton = createElement("button", {
     className: "searchComponent__submitButton",
     innerText: "🔍",
-    onclick: () => onchange,
   });
 
   const searchForm = createElement("form", {
@@ -24,7 +18,7 @@ export const searchComponent = ({ onchange }) => {
     children: [searchBar, submitButton],
     onsubmit: (event) => {
       event.preventDefault();
-      onchange(input.value);
+      onchange(searchBar.value);
     },
   });
 

@@ -32,11 +32,13 @@ function App() {
     containerGet.append(...characterElements);
   }
 
-  loadCharacters();
-
   const getSearch = searchComponent({
-    onchange: (value) => loadCharacters(value),
+    onchange: (value) => {
+      loadCharacters(value)};
+    ,
   });
+
+  loadCharacters();
 
   const main = createElement("main", {
     className: "main",

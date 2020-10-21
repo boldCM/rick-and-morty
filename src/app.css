@@ -21,18 +21,11 @@ body {
 }
 
 .main {
-  /* display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  position: relative; */
   width: 100%;
 }
 .main__containerGet {
   display: grid;
   grid-template-columns: repeat(4, 25%);
-  /* grid-template-rows: repeat(10, 1fr); */
   padding: 0 2.5% 0 2%;
-  /* position: relative; */
   width: 100%;
-  /* place-items: center; */
 }
