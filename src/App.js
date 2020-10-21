@@ -17,8 +17,8 @@ function App() {
     // children: [leonsCharacterContainer],
   });
 
-  async function loadCharacters() {
-    const charactersList = await getCharacter();
+  async function loadCharacters(name) {
+    const charactersList = await getCharacter(name);
 
     const characterElements = charactersList.map((character) =>
       createCharacterCard({
@@ -27,14 +27,22 @@ function App() {
       })
     );
 
+    containerGet.innerHTML = "";
     containerGet.append(...characterElements);
   }
 
   loadCharacters();
 
+  const searchBar = createElement("input", {
+    type: "text",
+    className: "main__searchBar",
+    placeholder: "Search by anything u want",
+    onchange: (event) => loadCharacters(event.target.value),
+  });
+
   const main = createElement("main", {
     className: "main",
-    children: [containerGet],
+    children: [searchBar, containerGet],
   });
   return main;
 }
