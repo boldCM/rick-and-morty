@@ -5,8 +5,12 @@ export async function getCharacterById(id) {
   return character;
 }
 
-export async function getCharacter() {
-  const url = "https://rickandmortyapi.com/api/character/";
+export async function getCharacter(name) {
+  let url = "https://rickandmortyapi.com/api/character/";
+  if (name) {
+    url += `?name=${name}`;
+  }
+
   const response = await fetch(url);
   const data = await response.json();
   // const fstCharacters = data.results.slice();
