@@ -18,9 +18,9 @@ export const createCharacterCard = ({ name, avatar, favouritesActive }) => {
       let currentFavourites = JSON.parse(
         localStorage.getItem("favourites") || "[]"
       );
+
       const isFavourite = currentFavourites.includes(name);
-      currentFavourites.push(name);
-      localStorage.setItem("favourites", JSON.stringify(currentFavourites));
+
       if (isFavourite) {
         currentFavourites = currentFavourites.filter(
           (favourite) => favourite !== name
