@@ -9,6 +9,12 @@
 }
 
 .characterCard__header {
+  display: flex;
+}
+.characterCard__header__favourite {
+  margin: 0px 20px 0px 30px;
+}
+.characterCard__header__name {
   /* styling wiederherstellen: */
   padding: 30px 0 10px 0;
   height: 100px;
