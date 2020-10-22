@@ -14,7 +14,7 @@ export async function getCharacterById(id) {
 }
 
 export async function getCharacter(name, page = 1) {
-  let url = "https://rickandmortyapi.com/api/character/?page=${page}";
+  let url = `https://rickandmortyapi.com/api/character/?page=${page}`;
   if (name) {
     url += `&name=${name}`;
   }
