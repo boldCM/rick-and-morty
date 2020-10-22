@@ -1,25 +1,28 @@
 .characterCard {
-  border-radius: 10px;
-  /* grid-area: 1/1/2/2; */
-  /* place-items: center; */
-  margin: 30px 30px 0 30px;
+  /* Styling wiederherstellen: */
+  /* margin: 30px 30px 0 30px; */
   background-color: #bbbbbb;
-  /* grid-column-start: 2; */
-  /* grid-column-end: 3; */
-  /* grid-row-start: 0; */
-  /* width: 100vw; */
+  position: relative;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin: 30px 10px 100% 10px;
 }
 
 .characterCard__header {
+  /* styling wiederherstellen: */
   padding: 30px 0 10px 0;
+  height: 100px;
   font-size: 1.5rem;
   font-weight: 700;
   text-align: center;
+  overflow: clip;
 }
 .characterCard__img {
   width: 100%;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
-  display: flex;
-  align-items: flex-end;
+  /* Styling wiederherstellen: */
+  /* display: flex;
+  align-items: flex-end; */
+  position: absolute;
 }
