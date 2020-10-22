@@ -62,6 +62,15 @@ function App() {
     className: "main",
     children: [mainHeader, getSearch, containerGet],
   });
+
+  window.addEventListener("scroll", () => {
+    const offsetY =
+      loadmoreButton.offsetParent.offsetHeight - window.innerHeight - 200;
+    if (offsetY < window.pageYOffset) {
+      loadmoreButton.click();
+    }
+  });
+
   return main;
 }
 

@@ -11,6 +11,7 @@ export const createCharacterCard = ({ name, avatar }) => {
     className: "characterCard__img",
     src: avatar,
     alt: name,
+    loading: "lazy",
   });
 
   const characterCard = createElement("div", {
