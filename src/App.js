@@ -13,6 +13,10 @@ import { createButton } from "../src/components/button";
 function App() {
   // const leonsCharacterContainer = createCharacterCard({ name, avatar });
   // müsste bei mir characterContainer sein
+  const loadmoreButton = createButton({
+    innerText: "Load more",
+    // onclick: something is happening
+  });
 
   const mainHeader = createElement("h1", {
     innerText: "Rick and Morty",
@@ -48,7 +52,7 @@ function App() {
 
   const main = createElement("main", {
     className: "main",
-    children: [mainHeader, getSearch, containerGet],
+    children: [mainHeader, getSearch, containerGet, loadmoreButton],
   });
   return main;
 }
