@@ -42,6 +42,9 @@ function App() {
     nextPage = charactersList.info.next?.match(/\d+/)[0];
     loadmoreButton.disabled = !charactersList.info.next;
     lastName = name;
+
+    // reappend loadmoreButton to avoid scrolldown:
+    containerGet.append(loadmoreButton);
   }
 
   const getSearch = searchComponent({
@@ -57,7 +60,7 @@ function App() {
 
   const main = createElement("main", {
     className: "main",
-    children: [mainHeader, getSearch, containerGet, loadmoreButton],
+    children: [mainHeader, getSearch, containerGet],
   });
   return main;
 }
