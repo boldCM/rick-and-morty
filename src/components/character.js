@@ -4,9 +4,36 @@ import starActive from "../assets/star_active.svg";
 import starInactive from "../assets/star_inactive.svg";
 
 export const createCharacterCard = ({ name, avatar, favouritesActive }) => {
+  const favouritesIconSrc = favouritesActive ? starActive : starInactive;
+
   const favouritesIcon = createElement("img", {
-    className: "characterCard__header__favourite",
-    src: favouritesActive ? starActive : starInactive,
+    // className: "characterCard__header__favourite",
+    src: favouritesIconSrc,
+  });
+
+  const favouritesButton = createElement("button", {
+    className: "characterCard__header__favouriteButton",
+    children: [favouritesIcon],
+    onclick: () => {
+      let currentFavourites = JSON.parse(
+        localStorage.getItem("favourites") || "[]"
+      );
+      const isFavourite = currentFavourites.includes(name);
+      currentFavourites.push(name);
+      localStorage.setItem("favourites", JSON.stringify(currentFavourites));
+      if (isFavourite) {
+        currentFavourites = currentFavourites.filter(
+          (favourite) => favourite !== name
+        );
+      }
+      // potentiellerKlammerfehler im ersten if-Satz
+      else {
+        currentFavourites.push(name);
+      }
+
+      localStorage.setItem("favourites", JSON.stringify(currentFavourites));
+      favouritesIcon.src = !isFavourite ? starActive : starInactive;
+    },
   });
 
   const characterName = createElement("div", {
@@ -23,7 +50,7 @@ export const createCharacterCard = ({ name, avatar, favouritesActive }) => {
 
   const characterCardHeader = createElement("div", {
     className: "characterCard__header",
-    children: [favouritesIcon, characterName],
+    children: [favouritesButton, characterName],
   });
 
   const characterCard = createElement("div", {

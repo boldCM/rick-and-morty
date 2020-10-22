@@ -11,8 +11,14 @@
 .characterCard__header {
   display: flex;
 }
-.characterCard__header__favourite {
-  margin: 0px 20px 0px 30px;
+/* .characterCard__header__favouriteButton:hover {
+  
+} */
+.characterCard__header__favouriteButton {
+  margin: 0px 10px 0px 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
 .characterCard__header__name {
   /* styling wiederherstellen: */
