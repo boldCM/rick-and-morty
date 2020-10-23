@@ -1,5 +1,5 @@
 import { createElement } from "../utils/elements";
-import "../components/character.css";
+import "./character.css";
 import starActive from "../assets/star_active.svg";
 import starInactive from "../assets/star_inactive.svg";
 
