@@ -2,7 +2,7 @@ import "./app.css";
 import { createElement } from "./utils/elements";
 import { createCharacterCard } from "../src/components/character";
 import { getCharacter } from "../src/utils/api";
-import { searchComponent } from "../../rick-and-morty/src/components/searchComponent";
+import { searchComponent } from "../../src/components/searchComponent";
 import { createButton } from "../src/components/button";
 
 function App() {
