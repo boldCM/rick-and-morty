@@ -8,6 +8,7 @@ import { createButton } from "../src/components/button";
 function App() {
   // const leonsCharacterContainer = createCharacterCard({ name, avatar });
   // müsste bei mir characterContainer sein
+
   let lastName = null;
   let nextPage = null;
 
@@ -29,12 +30,15 @@ function App() {
   });
 
   async function loadCharacters(name, page) {
+    const favourites = JSON.parse(localStorage.getItem("favourites") || "[]");
+
     const charactersList = await getCharacter(name, page);
 
     const characterElements = charactersList.results.map((character) =>
       createCharacterCard({
         name: character.name,
         avatar: character.image,
+        favouritesActive: favourites.includes(character.name),
       })
     );
 
