@@ -1,5 +1,5 @@
 import { createElement } from "../utils/elements";
-import "../components/searchForm.css";
+import "./searchForm.css";
 
 export const searchComponent = ({ onchange }) => {
   const searchBar = createElement("input", {

@@ -1,9 +1,9 @@
 import "./app.css";
 import { createElement } from "./utils/elements";
-import { createCharacterCard } from "../src/components/character";
-import { getCharacter } from "../src/utils/api";
-import { searchComponent } from "../../src/components/searchComponent";
-import { createButton } from "../src/components/button";
+import { createCharacterCard } from "./components/character";
+import { getCharacter } from "./utils/api";
+import { searchComponent } from "./components/searchComponent";
+import { createButton } from "./components/button";
 
 function App() {
   // const leonsCharacterContainer = createCharacterCard({ name, avatar });
